@@ -1,0 +1,3 @@
+rootProject.name = 'Scene'
+
+include ':app'
