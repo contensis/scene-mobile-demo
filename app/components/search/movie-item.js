@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, Image, TouchableHighlight, Dimensions } from 'react-native';
 import styles from '../../styles/styles';
-import { posterImage } from '../../services/movie';
+import { posterImage, releaseYear } from '../../services/movie';
 
 var MovieItem = function ({ movie, tileStyle, onPress }) {
 	let source = {
@@ -16,8 +16,6 @@ var MovieItem = function ({ movie, tileStyle, onPress }) {
 	};
 	let imageContainerStyle = { ...imageStyle, backgroundColor: '#FF0000' };
 
-	let textStyle = { ...imageStyle };
-
 	let _onPress = () => {
 		if (onPress) {
 			onPress(movie);
@@ -27,12 +25,11 @@ var MovieItem = function ({ movie, tileStyle, onPress }) {
 	return (
 		<View>
 			<TouchableHighlight onPress={_onPress}>
-				<View>
-					<View style={imageContainerStyle}>
-						<Image style={imageStyle} source={source} />
-					</View>
-					<View style={textStyle}>
-						<Text>{movie && movie.entryTitle} {movie && movie.releaseDate}</Text>
+				<View style={styles.movieItemRow}>
+					<Image style={imageStyle} source={source} />
+					<View style={styles.movieItemTextContainer}>
+						<Text style={styles.movieItemText}>{movie && movie.entryTitle}</Text>
+						<Text style={styles.movieItemText}>{releaseYear(movie)}</Text>					
 					</View>
 				</View>
 			</TouchableHighlight>

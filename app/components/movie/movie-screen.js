@@ -23,7 +23,7 @@ var MovieScreen = function ({ movie }) {
 					<Text style={styles.movieItemHeader}>Released</Text>
 					<Text style={styles.movieItem}>{releaseDate(movie)}</Text>
 					<Text style={styles.movieItemHeader}>Runtime</Text>
-					<Text style={styles.movieItem}>{movie.runtime}</Text>
+					<Text style={styles.movieItem}>{movie.runtime} mins</Text>
 				</View>
 			</ScrollView>
 		</View>

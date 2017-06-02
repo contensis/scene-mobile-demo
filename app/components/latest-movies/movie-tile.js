@@ -28,6 +28,7 @@ var MovieTile = function ({ movie, tileStyle, onPress }) {
 			</TouchableHighlight>
 		</View>
 	);
+	
 }
 
 export default MovieTile;

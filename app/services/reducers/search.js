@@ -21,10 +21,8 @@ export function searchReducer(state = searchInitialState, action) {
 async function dispatchSearch(searchText, dispatch, getState) {
 	let movies = null;	
 	try {
-		console.log('searching');
 		movies = await searchMovies(searchText);
 		dispatch({ type: SEARCH_COMPLETE, movies });
-		console.log('success');
 		console.log(movies);
 	} catch (error) {
 		dispatch({ type: SEARCH_ERROR, error });

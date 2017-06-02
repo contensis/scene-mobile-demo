@@ -19,14 +19,17 @@ const styles = StyleSheet.create({
 	},
 	tileList: {
 		justifyContent: "flex-start",
-		flexDirection: "row",
-		flexWrap: "wrap"
+//		flexDirection: "row",
+//		flexWrap: "wrap"
+	},
+	tileRow: {
+		flexDirection: "row"
 	},
 	centering: {
 		alignItems: 'center',
 		justifyContent: 'center',
 		padding: 8,
-	},
+	},	
 	movieListContainer: {
 		flex: 1,
 		//justifyContent: 'left',
@@ -36,7 +39,8 @@ const styles = StyleSheet.create({
 	movieList: {
 		justifyContent: "flex-start",
 		flexDirection: "row",
-		flexWrap: "wrap"
+		flexWrap: "wrap",
+		backgroundColor: '#F5FCFF',
 	},
 	movie: {
 		margin: 20
@@ -59,6 +63,21 @@ const styles = StyleSheet.create({
 		fontSize: 15,
 		marginBottom: 5
 	},
+	textInput: {
+		marginBottom: 1
+	},
+	movieItemRow: {
+		justifyContent: "flex-start",
+		flexDirection: "row",
+		flexWrap: "wrap",
+	},	
+	movieItemTextContainer: {
+		margin: 10
+	},
+	movieItemText: {
+		fontSize: 15,
+		fontWeight: 'bold'
+	}
 });
 
 

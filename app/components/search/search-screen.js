@@ -19,25 +19,31 @@ var SearchScreen = function ({ movies, search, isSearching, viewMovie, searchMov
 		searchMovies(input);
 	};
 
-	let textStyle = { width: Dimensions.get('window').width - 20 };
 	let searchText = (search && search.searchText) || '';
-
-	return (
-		<View style={styles.movieListContainer}>
-			<TextInput 
-				placeholder={'Search...'} 
-				value={searchText} 
-				onChangeText={onChangeText} 
-				style={textStyle} 
-			/>
-			<ActivityIndicator
-				animating={isSearching}
+/* todo
+<ActivityIndicator
+				animating={true}
 				style={styles.centering}
 				size="large"
 			/>
-			<ListView 
-				dataSource={movieDs} 
-				enableEmptySections={true} 
+*/
+	return (
+		<View style={styles.movieListContainer}>
+			<View style={styles.textInput}>
+				<TextInput
+					placeholder={'Search...'}
+					value={searchText}
+					onChangeText={onChangeText}
+				/>
+			</View>			
+			{isSearching && <ActivityIndicator
+								animating={true}
+								style={styles.centering}
+								size="large"
+							/>}
+			<ListView
+				dataSource={movieDs}
+				enableEmptySections={true}
 				contentContainerStyle={styles.movieList}
 				renderRow={(movie) => <MovieItem movie={movie} onPress={select} />}
 			/>
