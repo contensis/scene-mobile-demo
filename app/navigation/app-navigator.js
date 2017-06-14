@@ -8,9 +8,17 @@ import MovieScreen from '../components/movie/movie-screen';
 import SearchScreen from '../components/search/search-screen';
 
 export const ListNavigator = TabNavigator({
-	'LatestMovies': { screen: LatestMoviesScreen },
-	'Search': {screen: SearchScreen }
-});
+		'LatestMovies': { screen: LatestMoviesScreen },
+		'Search': {screen: SearchScreen },
+	},
+	{
+		tabBarOptions: {
+			style: {
+				backgroundColor: 'red'
+			}
+		}
+	}
+);
 
 var ListScreen = () => {
 	return (<ListNavigator />);

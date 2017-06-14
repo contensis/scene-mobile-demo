@@ -2,7 +2,7 @@ import { Client, Query, Op, OrderBy } from 'api-delivery-js';
 
 function createClient() {
 	return Client.create({
-		rootUrl: 'http://cms-moviedb-develop.cloud.contensis.com', // 'https://cms-rocket-01.cloud.contensis.com',
+		rootUrl: 'https://cms-rocket-01.cloud.contensis.com',
     	accessToken: 'Soym9a7jU84qSSk00ajkRDvo1b3euKNwi2DZtpb6IlrTzvGG',
     	projectId: 'website',
     	language: 'en-GB',

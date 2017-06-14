@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#F5FCFF',
+		backgroundColor: '#2f2f2f',
 	},
 	welcome: {
 		fontSize: 20,
@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
 	},
 	instructions: {
 		textAlign: 'center',
-		color: '#333333',
-		marginBottom: 5,
+		color: '#FFFFFF',
+		marginBottom: 30,
 	},
 	tileList: {
 		justifyContent: "flex-start",

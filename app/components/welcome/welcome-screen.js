@@ -1,19 +1,18 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import styles from '../../styles/styles';
 
 var WelcomeScreen = function () {
 	return (
 		<View style={styles.container}>
-			<Text style={styles.welcome}>
-				Scene Logo.
-        	</Text>
+			<View style={styles.container}>
+				<Image source={require('../img/scene_large.png')} style={{marginBottom:100}}></Image>
+			</View>
+
 			<Text style={styles.instructions}>
 				Powered by the Movie DB
-        	</Text>
-			<Text style={styles.instructions}>
-				Contensis
-        	</Text>
+			</Text>
+			<Image source={require('../img/contensis.png')} style={{width:70}} resizeMode={'contain'}></Image>
 		</View>
 	);
 }

@@ -6,7 +6,10 @@ export function posterImage(movie, size) {
 		imageId = movie.posterImage.asset.sys.id;
 	}
 
-	return `http://cms-moviedb-develop.cloud.contensis.com/ui/assets/image?fileId=${imageId}&width=${size}&height=${size}`;
+	//let rootUrl = 'http://cms-moviedb-develop.cloud.contensis.com';
+	let rootUrl = 'https://cms-rocket-01.cloud.contensis.com';
+
+	return rootUrl + `/ui/assets/image?fileId=${imageId}&width=${size}&height=${size}`;
 }
 
 export function releaseYear(movie) {
