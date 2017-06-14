@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, ListView, Dimensions, TextInput, ActivityIndicator } from 'react-native';
 import { connect } from 'react-redux';
-import styles from '../../styles/styles';
+import styles, { LightColor } from '../../styles/styles';
 import { search } from '../../services/reducers/search';
 import { viewMovie } from '../../services/reducers/view-movie';
 import MovieItem from './movie-item';
@@ -29,8 +29,10 @@ var SearchScreen = function ({ movies, search, isSearching, viewMovie, searchMov
 */
 	return (
 		<View style={styles.movieListContainer}>
-			<View style={styles.textInput}>
+			<View style={styles.textInputContainer}>
 				<TextInput
+					style={styles.textInput}
+					placeholderTextColor={LightColor}
 					placeholder={'Search...'}
 					value={searchText}
 					onChangeText={onChangeText}

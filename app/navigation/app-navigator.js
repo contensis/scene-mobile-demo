@@ -6,7 +6,7 @@ import WelcomeScreen from '../components/welcome/welcome-screen';
 import LatestMoviesScreen from '../components/latest-movies/latest-movies-screen';
 import MovieScreen from '../components/movie/movie-screen';
 import SearchScreen from '../components/search/search-screen';
-import styles, { TabColor } from '../styles/styles';
+import styles, { TabColor, LightColor } from '../styles/styles';
 
 export const ListNavigator = TabNavigator({
 		'LatestMovies': { screen: LatestMoviesScreen },
@@ -16,6 +16,13 @@ export const ListNavigator = TabNavigator({
 		tabBarOptions: {
 			style: {
 				backgroundColor: TabColor
+			},
+			indicatorStyle: {
+				backgroundColor: LightColor
+			},
+			labelStyle: {
+				color: LightColor,
+				fontSize: 15
 			}
 		}
 	}

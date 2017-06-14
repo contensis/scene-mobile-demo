@@ -33,3 +33,8 @@ export function searchMovies(searchText) {
 	let client = createClient();
 	return client.entries.search(query);
 }
+
+export function getMovie(id) {
+	let client = createClient();
+	return client.entries.get({ id, linkDepth: 1 });
+}

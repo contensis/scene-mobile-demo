@@ -15,6 +15,12 @@ const styles = StyleSheet.create({
 		padding: 5,
 		backgroundColor: DarkColor
 	},
+	headerTitle: {
+		color: LightColor
+	},
+	headerBackTitle: {
+		color: LightColor
+	},
 	welcome: {
 		fontSize: 20,
 		textAlign: 'center',
@@ -22,7 +28,7 @@ const styles = StyleSheet.create({
 	},
 	instructions: {
 		textAlign: 'center',
-		color: '#FFFFFF',
+		color: LightColor,
 		marginBottom: 30,
 	},
 	tileList: {
@@ -42,13 +48,13 @@ const styles = StyleSheet.create({
 		flex: 1,
 		//justifyContent: 'left',
 		//alignItems: 'left',
-		backgroundColor: LightColor,
+		backgroundColor: DarkColor,
 	},
 	movieList: {
 		justifyContent: "flex-start",
 		flexDirection: "row",
 		flexWrap: "wrap",
-		backgroundColor: LightColor,
+		backgroundColor: DarkColor,
 	},
 	movie: {
 		margin: 20
@@ -66,14 +72,20 @@ const styles = StyleSheet.create({
 	movieItemHeader: {
 		fontSize: 15,
 		marginBottom: 5,
-		fontWeight: 'bold'
+		fontWeight: 'bold',
+		color: LightColor
 	},	
 	movieItem: {
 		fontSize: 15,
-		marginBottom: 5
+		marginBottom: 5,
+		color: LightColor
 	},
-	textInput: {
+	textInputContainer: {
 		marginBottom: 1
+	},
+	textInput: {		
+		fontSize: 15,
+		color: LightColor
 	},
 	movieItemRow: {
 		justifyContent: "flex-start",
@@ -85,7 +97,8 @@ const styles = StyleSheet.create({
 	},
 	movieItemText: {
 		fontSize: 15,
-		fontWeight: 'bold'
+		fontWeight: 'bold',
+		color: LightColor		
 	}
 });
 
