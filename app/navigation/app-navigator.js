@@ -26,7 +26,8 @@ var ListScreen = () => {
 };
 
 ListScreen.navigationOptions = {
-	header: (props) => <View style={styles.header}><Image source={require('../img/scene_large.png')}></Image></View>
+	header: (props) => <View style={styles.header}><Image style={{height:20}} 
+	resizeMode={'contain'} source={require('../img/scene_large.png')}></Image></View>
 };
 
 export const AppNavigator = StackNavigator({	

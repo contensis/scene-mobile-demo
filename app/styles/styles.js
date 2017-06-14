@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
 	},
 	header: {
 		padding: 5,
-		backgroundColor: DarkColor
+		backgroundColor: DarkColor,
+		alignItems: 'center'
 	},
 	welcome: {
 		fontSize: 20,
