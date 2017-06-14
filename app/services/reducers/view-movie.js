@@ -1,4 +1,5 @@
 import { NavigationActions } from 'react-navigation';
+import { getMovie } from '../api/movies';
 
 var VIEW_MOVIE = 'VIEW_MOVIE:VIEW_MOVIE';
 var VIEW_MOVIE_COMPLETE = 'VIEW_MOVIE:VIEW_MOVIE_COMPLETE';
@@ -20,8 +21,8 @@ export function viewMovie(movie) {
 		let result = null;
 		dispatch({ type: VIEW_MOVIE });
 		try {
-			result = await Promise.resolve(movie);
-			dispatch({ type: VIEW_MOVIE_COMPLETE, movie });
+			result = await getMovie(movie.sys.id);
+			dispatch({ type: VIEW_MOVIE_COMPLETE, movie: result });
 			dispatch(NavigationActions.navigate({ routeName: 'Movie', params: { title: movie.entryTitle } }));
 		} catch (error) {
 			dispatch({ type: VIEW_MOVIE_ERROR, error });
