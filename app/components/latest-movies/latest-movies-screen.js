@@ -25,10 +25,11 @@ var getTileStyle = () => {
 	const { width } = Dimensions.get('window');
 	const margin = 5;
 	const tilesPerRow = 2;
-	let size = (width - margin * (tilesPerRow * 2)) / tilesPerRow;
+	let tileWidth = (width - margin * (tilesPerRow * 2)) / tilesPerRow;
+	let tileHeight = tileWidth * 1.5;
 	return {
-		width: size,
-		height: size,
+		width: tileWidth,
+		height: tileHeight,
 		marginHorizontal: margin
 	};
 };

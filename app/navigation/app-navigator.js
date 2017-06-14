@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { connect } from 'react-redux';
 import { addNavigationHelpers, StackNavigator, TabNavigator } from 'react-navigation';
 import WelcomeScreen from '../components/welcome/welcome-screen';
 import LatestMoviesScreen from '../components/latest-movies/latest-movies-screen';
 import MovieScreen from '../components/movie/movie-screen';
 import SearchScreen from '../components/search/search-screen';
+import styles, { TabColor } from '../styles/styles';
 
 export const ListNavigator = TabNavigator({
 		'LatestMovies': { screen: LatestMoviesScreen },
@@ -14,7 +15,7 @@ export const ListNavigator = TabNavigator({
 	{
 		tabBarOptions: {
 			style: {
-				backgroundColor: 'red'
+				backgroundColor: TabColor
 			}
 		}
 	}
@@ -25,7 +26,7 @@ var ListScreen = () => {
 };
 
 ListScreen.navigationOptions = {
-	title: 'Movies'
+	header: (props) => <View style={styles.header}><Image source={require('../img/scene_large.png')}></Image></View>
 };
 
 export const AppNavigator = StackNavigator({	

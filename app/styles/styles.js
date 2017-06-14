@@ -1,11 +1,19 @@
 import { StyleSheet } from 'react-native';
 
+export var LightColor = '#F4F4F4';
+export var DarkColor = '#2F2F2F';
+export var TabColor = '#444444';
+
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#2f2f2f',
+		backgroundColor: DarkColor,
+	},
+	header: {
+		padding: 5,
+		backgroundColor: DarkColor
 	},
 	welcome: {
 		fontSize: 20,
@@ -34,13 +42,13 @@ const styles = StyleSheet.create({
 		flex: 1,
 		//justifyContent: 'left',
 		//alignItems: 'left',
-		backgroundColor: '#F5FCFF',
+		backgroundColor: LightColor,
 	},
 	movieList: {
 		justifyContent: "flex-start",
 		flexDirection: "row",
 		flexWrap: "wrap",
-		backgroundColor: '#F5FCFF',
+		backgroundColor: LightColor,
 	},
 	movie: {
 		margin: 20
@@ -52,7 +60,8 @@ const styles = StyleSheet.create({
 	title: {
 		fontSize: 20,
 		marginBottom: 5,
-		fontWeight: 'bold'
+		fontWeight: 'bold',
+		color: LightColor
 	},
 	movieItemHeader: {
 		fontSize: 15,

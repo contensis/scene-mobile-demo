@@ -6,6 +6,7 @@ import { posterImage, releaseYear, releaseDate } from '../../services/movie';
 
 var MovieScreen = function ({ movie }) {
 	const { width } = Dimensions.get('window');
+	let height = width * 1.5;
 
 	let source = {
 		uri: posterImage(movie, 500)
@@ -14,7 +15,7 @@ var MovieScreen = function ({ movie }) {
 	return (
 		<View style={styles.container}>
 			<ScrollView>
-				<Image source={source} style={{ width: width, height: width }} />
+				<Image source={source} style={{ width: width, height: height }} />
 
 				<View style={styles.movie}>
 					<Text style={styles.title}>{movie.entryTitle} ({releaseYear(movie)})</Text>

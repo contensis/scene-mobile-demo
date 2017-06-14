@@ -12,9 +12,9 @@ var MovieItem = function ({ movie, tileStyle, onPress }) {
 
 	let imageStyle = {
 		width: width / 3,
-		height: width / 3
+		height: (width / 3) * 1.5
 	};
-	let imageContainerStyle = { ...imageStyle, backgroundColor: '#FF0000' };
+	let imageContainerStyle = { ...imageStyle };
 
 	let _onPress = () => {
 		if (onPress) {
