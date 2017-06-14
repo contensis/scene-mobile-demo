@@ -1,6 +1,30 @@
+<img src="docs/contensis.png" style="width: 100px; float:right" />
+
 # Scene Mobile Demo
 
-A react-native moble app demo using the Contensis Delivery API.
+A react-native mobile app demo for Android using the Contensis Delivery API.
+
+## Screenshots
+
+
+<div>
+    <div style="float:left; margin-right:20px;">
+        <img src="docs/welcome_screen.png" height="300"/>
+        <p>Welcome</p>
+    </div>
+    <div style="float:left; margin-right:20px;">
+        <img src="docs/latest_movies.png" height="300"/>
+        <p>Latest movies</p>
+    </div>
+    <div style="float:left; margin-right:20px;">
+        <img src="docs/search.png" height="300"/>
+        <p>Latest movies</p>
+    </div>
+    <div style="margin-right:20px;">
+         <img src="docs/movie_record.png" height="300"/>
+        <p>Movie record</p>
+    </div>
+</div>
 
 ## Prerequisites
 
