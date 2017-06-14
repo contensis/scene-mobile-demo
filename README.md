@@ -1,5 +1,3 @@
-<img src="docs/contensis.png" style="width: 100px; float:right" />
-
 # Scene Mobile Demo
 
 A react-native mobile app demo for Android using the Contensis Delivery API.
