@@ -66,7 +66,7 @@ var MovieScreen = function ({ movie }) {
 MovieScreen.navigationOptions = ({ navigation, screenProps }) => {
 	return {
 		title: navigation.state.params.title,
-		headerStyle: styles.header,
+		headerStyle: styles.movieScreenHeader,
 		headerTitleStyle: styles.headerTitle,
 		headerTintColor: LightColor
 	};

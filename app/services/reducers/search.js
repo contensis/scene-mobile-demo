@@ -23,10 +23,8 @@ async function dispatchSearch(searchText, dispatch, getState) {
 	try {
 		movies = await searchMovies(searchText);
 		dispatch({ type: SEARCH_COMPLETE, movies });
-		console.log(movies);
 	} catch (error) {
 		dispatch({ type: SEARCH_ERROR, error });
-		console.log(error);
 	}
 	return movies;
 };

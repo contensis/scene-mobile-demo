@@ -23,7 +23,7 @@ export function viewMovie(movie) {
 		try {
 			result = await getMovie(movie.sys.id);
 			dispatch({ type: VIEW_MOVIE_COMPLETE, movie: result });
-			dispatch(NavigationActions.navigate({ routeName: 'Movie', params: { title: movie.entryTitle } }));
+			dispatch(NavigationActions.navigate({ routeName: 'Movie', params: { title: result.title } }));
 		} catch (error) {
 			dispatch({ type: VIEW_MOVIE_ERROR, error });
 		}		

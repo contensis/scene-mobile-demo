@@ -16,6 +16,10 @@ const styles = StyleSheet.create({
 		backgroundColor: DarkColor,
 		alignItems: 'center'
 	},
+	movieScreenHeader: {
+		padding: 5,
+		backgroundColor: DarkColor
+	},
 	headerTitle: {
 		color: LightColor
 	},
